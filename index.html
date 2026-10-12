@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#17151d" />
+    <meta name="description" content="Una lista de películas y series para Marielena." />
+    <title>Para Marielena · Películas y series</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">M<span>✦</span>E <small>cinema club</small></a>
+        <span class="topbar-note">Aquí te dejo la lista <span aria-hidden="true">♡</span></span>
+      </header>
+
+      <main id="inicio">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <p class="eyebrow"><span class="eyebrow-line"></span> TU PRÓXIMA PELÍCULA PARA VER</p>
+            <h1 id="hero-title">Hola, <em>Marielena.</em></h1>
+            <p class="hero-copy">Te dejo varias películas y series que me gustan. Échales un ojo y marca las que ya viste o las que se te antojen para después.</p>
+            <a class="hero-link" href="#coleccion">Explorar la lista <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-halo"></div>
+            <div class="art-ticket"><span>ADMIT ONE</span><strong>movie<br />night</strong><small>MARIELENA · EDICIÓN ESPECIAL</small></div>
+            <div class="art-star star-one">✦</div><div class="art-star star-two">✳</div>
+            <div class="art-sparkle">✧</div>
+          </div>
+        </section>
+
+        <section class="favorites" aria-labelledby="favorites-title">
+          <div class="favorites-heading">
+            <div>
+              <p class="eyebrow light">POR SI NO SABES POR DÓNDE EMPEZAR</p>
+              <h2 id="favorites-title">Mis <em>favoritas.</em></h2>
+              <p>Estas son las que más me gustan a mí. Pícale a cualquiera para encontrarla en la lista.</p>
+            </div>
+            <span class="favorites-mark" aria-hidden="true">✳</span>
+          </div>
+          <div class="favorites-list" id="favorites-list"></div>
+        </section>
+
+        <section class="collection" id="coleccion" aria-labelledby="collection-title">
+          <div class="section-intro">
+            <div>
+              <p class="eyebrow light">ELIGE TU SIGUIENTE MARATÓN</p>
+              <h2 id="collection-title">La lista <em>especial.</em></h2>
+              <p>Si aún no la has visto, mándala a pendientes. Si ya la conoces, márcala como vista.</p>
+            </div>
+            <div class="total-badge"><strong id="total-count">0</strong><span>historias<br />para descubrir</span></div>
+          </div>
+
+          <div class="toolbar">
+            <div class="tabs" role="tablist" aria-label="Filtrar películas y series">
+              <button class="tab is-active" type="button" data-filter="all" role="tab" aria-selected="true">Todas <span id="count-all">0</span></button>
+              <button class="tab" type="button" data-filter="new" role="tab" aria-selected="false">Por elegir <span id="count-new">0</span></button>
+              <button class="tab" type="button" data-filter="pending" role="tab" aria-selected="false">Pendientes <span id="count-pending">0</span></button>
+              <button class="tab" type="button" data-filter="seen" role="tab" aria-selected="false">Ya vistas <span id="count-seen">0</span></button>
+              <button class="tab" type="button" data-filter="favorites" role="tab" aria-selected="false">Mis favoritas <span id="count-favorites">0</span></button>
+            </div>
+            <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Buscar título</span><input id="search" type="search" placeholder="Buscar un título..." autocomplete="off" /></label>
+          </div>
+
+          <div id="list-content" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <footer class="footer"><span>M<span class="footer-star">✦</span>E cinema club</span><p>Tu selección se guarda automáticamente en este navegador.</p><a href="#inicio">Volver arriba ↑</a></footer>
+    </div>
+  </body>
+</html>
